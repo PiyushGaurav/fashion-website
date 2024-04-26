@@ -6,7 +6,7 @@ export default function App() {
 	return (
 		<div className="root-container">
 			<Header />
-			{/* <Hero /> */}
+			<Hero />
 		</div>
 	);
 }

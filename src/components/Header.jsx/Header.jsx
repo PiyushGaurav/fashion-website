@@ -4,10 +4,10 @@ import logo from '../../assets/logo.png';
 
 export default function Header() {
 	return (
-		<div className={styles.header}>
-			<div className={styles.logo}>
+		<div className={styles.header_container}>
+			<div className={styles.logo_container}>
 				<img src={logo} alt="Fashion Logo" />
-				<h1 className={styles.logoname}>Fashion</h1>
+				<h1 className={styles.logo_name}>Fashion</h1>
 			</div>
 			<nav className={styles.navbar}>
 				<ul>
