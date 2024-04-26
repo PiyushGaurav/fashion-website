@@ -19,11 +19,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--white);
 	height: 100dvb;
-	/* font grows 1px for every 100px of viewport width */
-	font-size: calc(16px + 1vw);
-	/* leading grows along with font,
-	 with an additional 0.1em + 0.5px per 100px of the viewport */
-	line-height: calc(1.1em + 0.5vw);
+	font-size: clamp(0.5rem, 0.8rem + 0.5vw, 1.4rem);
 }
 
 .root-container {

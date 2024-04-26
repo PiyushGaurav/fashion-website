@@ -10,8 +10,36 @@
 }
 
 .brand_container > img {
-	height: 4rem;
+	height: 3.5rem;
 	width: auto;
 	object-fit: fill;
 	mix-blend-mode: color-burn;
+}
+
+@media (max-width: 1200px) {
+	/*Tablets [601px -> 1200px]*/
+	.brand_container {
+		height: 9rem;
+	}
+	.brand_container > img {
+		height: 2.5rem;
+	}
+}
+@media (max-width: 600px) {
+	/*Big smartphones [426px -> 600px]*/
+	.brand_container {
+		height: 8rem;
+	}
+	.brand_container > img {
+		height: 1.5rem;
+	}
+}
+@media (max-width: 425px) {
+	/*Small smartphones [325px -> 425px]*/
+	.brand_container {
+		height: 7rem;
+	}
+	.brand_container > img {
+		height: 0.75rem;
+	}
 }
