@@ -18,8 +18,8 @@
 body {
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--white);
-	height: 100dvb;
-	font-size: clamp(0.5rem, 0.8rem + 0.5vw, 1.4rem);
+	height: 100vh;
+	/* font-size: clamp(0.5rem, 0.8rem + 0.5vw, 1.4rem); */
 }
 
 .root-container {

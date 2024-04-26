@@ -24,7 +24,14 @@ img {
 	font-weight: bold;
 }
 
-ul {
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.navbar ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -32,7 +39,7 @@ ul {
 	gap: 2rem;
 }
 
-li {
+.navbar li {
 	list-style: none;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -51,4 +58,61 @@ li {
 	border-radius: 0.25rem;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+
+.toggle_button {
+	display: none;
+	position: absolute;
+	top: 4rem;
+	right: 3rem;
+	z-index: 12;
+}
+
+.mobile_navbar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100%;
+	background-color: var(--yellow);
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.mobile_navbar li {
+	list-style: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+@media (max-width: 850px) {
+	.header_container {
+		/* background-color: green; */
+	}
+	.navbar ul {
+		display: none;
+	}
+	.toggle_button {
+		display: block;
+		cursor: pointer;
+	}
+	.signup {
+		height: 4rem;
+		width: 10rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media (width>850px) {
+	.mobile_navbar {
+		display: none;
+	}
 }
