@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brands, Header, Hero, NewArrival } from './components';
+import { Brands, Header, Hero, NewArrival, Sale } from './components';
 
 export default function App() {
 	return (
@@ -8,6 +8,7 @@ export default function App() {
 			<Hero />
 			<Brands />
 			<NewArrival />
+			<Sale />
 		</div>
 	);
 }
