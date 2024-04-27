@@ -16,8 +16,7 @@
 	mix-blend-mode: color-burn;
 }
 
-@media (max-width: 1200px) {
-	/*Tablets [601px -> 1200px]*/
+@media (width<=1200px) {
 	.brand_container {
 		height: 9rem;
 	}
@@ -25,8 +24,7 @@
 		height: 2.5rem;
 	}
 }
-@media (max-width: 600px) {
-	/*Big smartphones [426px -> 600px]*/
+@media (width<= 800px) {
 	.brand_container {
 		height: 8rem;
 	}
@@ -34,12 +32,24 @@
 		height: 1.5rem;
 	}
 }
-@media (max-width: 425px) {
-	/*Small smartphones [325px -> 425px]*/
+@media (width<= 600px) {
 	.brand_container {
 		height: 7rem;
 	}
 	.brand_container > img {
-		height: 0.75rem;
+		height: 1.35rem;
+	}
+}
+@media (width<= 425px) {
+	.brand_container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		padding: 0 0;
+		margin: 0 0;
+	}
+	.brand_container > img {
+		margin: auto;
 	}
 }

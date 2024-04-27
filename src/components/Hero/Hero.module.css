@@ -69,22 +69,13 @@
 }
 
 @media (max-width: 1000px) {
-	/*Small smartphones [325px -> 425px]*/
 	.hero_container {
 		flex-direction: column;
 		justify-content: space-around;
 	}
 }
 
-@media (max-width: 400px) {
-	/*Small smartphones [325px -> 425px]*/
-	.hero_container {
-		flex-direction: column;
-		justify-content: center;
-	}
-}
-
-@media (max-width: 450px) {
+@media (width <= 450px) {
 	.hero_container {
 		flex-direction: column;
 		justify-content: space-around;
