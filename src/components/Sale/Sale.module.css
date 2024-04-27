@@ -1,11 +1,11 @@
 .hero_container {
-	background-color: #f5f6f5;
 	margin: 3rem 0;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
 	align-items: center;
-	background-color: #ffed64;
+	background: rgb(255, 236, 99);
+	background: linear-gradient(180deg, rgb(246, 229, 95) 0%, rgb(211, 190, 80) 100%);
 }
 
 .titles_container {
@@ -13,11 +13,16 @@
 	margin: auto;
 }
 
-h1 {
+.titles_container h1 {
 	font-size: 5rem;
 	position: relative;
 	z-index: 2;
 	line-height: 5rem;
+	font-weight: 900;
+}
+
+.titles_container b {
+	top: 2rem;
 }
 
 .titles_container > h1:first-child::before {
@@ -62,18 +67,46 @@ h1 {
 	font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 1000px) {
-	/*Small smartphones [325px -> 425px]*/
+@media (max-width: 1000px) {
 	.hero_container {
-		flex-direction: column;
-		justify-content: space-around;
+		grid-template-columns: 1fr;
+	}
+	.titles_container {
+		margin: 3rem;
+		grid-row-start: -1;
+		grid-row-end: 1-;
+	}
+	.titles_container h1 {
+		font-size: 3.5rem;
+		position: relative;
+		z-index: 2;
+		line-height: 4.5rem;
+	}
+
+	.titles_container > h1:first-child::before {
+		width: 17rem;
+		height: 4.5rem;
+	}
+	.titles_container > p {
+		font-size: 1.4rem;
 	}
 }
 
-@media only screen and (max-width: 400px) {
-	/*Small smartphones [325px -> 425px]*/
-	.hero_container {
-		flex-direction: column;
-		justify-content: center;
+@media (width <= 450px) {
+	.titles_container h1 {
+		font-size: 3rem;
+		position: relative;
+		z-index: 2;
+		line-height: 4rem;
+	}
+
+	.titles_container > h1:first-child::before {
+		width: 15rem;
+		height: 4rem;
+	}
+	.titles_container > p {
+		font-size: 1.2rem;
+		margin: 1rem 0;
+		width: 100%;
 	}
 }
