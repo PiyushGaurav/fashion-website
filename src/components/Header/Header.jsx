@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Header.module.css';
 import logo from '../../assets/logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +21,16 @@ export default function Header() {
 					<li>Lifestyle</li>
 					<button className={styles.signup}>Sign up</button>
 				</ul>
+				<div className={styles.toggle_button} onClick={() => setIsOpen(isOpen => !isOpen)}>
+					{!isOpen ? <GiHamburgerMenu size={30} color="black" /> : <IoClose size={30} color="black" />}
+				</div>
 			</nav>
-			<div className={styles.toggle_button} onClick={() => setIsOpen(isOpen => !isOpen)}>
-				<GiHamburgerMenu size={30} color="black" />
-			</div>
+
 			{isOpen && (
 				<div className={styles.mobile_navbar}>
+					<div className={styles.toggle_button} onClick={() => setIsOpen(isOpen => !isOpen)}>
+						{!isOpen ? <GiHamburgerMenu size={30} color="black" /> : <IoClose size={30} color="black" />}
+					</div>
 					<ul>
 						<li>Catalogue</li>
 						<li>Fashion</li>

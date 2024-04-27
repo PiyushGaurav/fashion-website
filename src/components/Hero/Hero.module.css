@@ -9,10 +9,10 @@
 }
 
 .titles_container {
-	margin: 3rem;
+	padding: 3rem;
 }
 
-h1 {
+.titles_container h1 {
 	font-size: 4rem;
 	position: relative;
 	z-index: 2;
@@ -68,7 +68,7 @@ h1 {
 	font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
 	/*Small smartphones [325px -> 425px]*/
 	.hero_container {
 		flex-direction: column;
@@ -76,10 +76,35 @@ h1 {
 	}
 }
 
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
 	/*Small smartphones [325px -> 425px]*/
 	.hero_container {
 		flex-direction: column;
 		justify-content: center;
+	}
+}
+
+@media (max-width: 450px) {
+	.hero_container {
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: #f5f6f5;
+		margin: 0;
+		border-radius: 0rem;
+	}
+	.titles_container h1 {
+		font-size: 3rem;
+		position: relative;
+		z-index: 2;
+		line-height: 5rem;
+	}
+	.titles_container > h1:nth-child(3)::before {
+		width: 15rem;
+		height: 5rem;
+	}
+
+	.titles_container > h1:first-child::before {
+		width: 15rem;
+		height: 5rem;
 	}
 }

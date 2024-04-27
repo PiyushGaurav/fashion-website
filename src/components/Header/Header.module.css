@@ -15,6 +15,7 @@ img {
 
 .logo_container {
 	display: flex;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
 }
@@ -29,6 +30,7 @@ img {
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
+	height: 4rem;
 }
 
 .navbar ul {
@@ -63,24 +65,32 @@ img {
 .toggle_button {
 	display: none;
 	position: absolute;
-	top: 4rem;
+	top: 3.5rem;
 	right: 3rem;
 	z-index: 12;
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
 
 .mobile_navbar ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: 100%;
+	width: 20rem;
 	background-color: var(--yellow);
 	flex-direction: column;
+	justify-content: flex-start;
+	padding-top: 10rem;
+	padding-bottom: 5rem;
 	align-items: center;
 	gap: 2rem;
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	z-index: 10;
 }
 
@@ -93,16 +103,21 @@ img {
 	cursor: pointer;
 }
 
-@media (max-width: 850px) {
-	.header_container {
-		/* background-color: green; */
+@media (width > 850px) {
+	.toggle_button {
+		display: none;
 	}
+	.mobile_navbar {
+		display: none;
+	}
+}
+
+@media (width <= 850px) {
 	.navbar ul {
 		display: none;
 	}
 	.toggle_button {
-		display: block;
-		cursor: pointer;
+		display: flex;
 	}
 	.signup {
 		height: 4rem;
@@ -111,8 +126,14 @@ img {
 	}
 }
 
-@media (width>850px) {
-	.mobile_navbar {
+@media (width<=450px) {
+	.navbar ul {
 		display: none;
+	}
+	.mobile_navbar {
+		display: flex;
+	}
+	.mobile_navbar ul {
+		width: 100%;
 	}
 }
